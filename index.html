@@ -2,6 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Basic Google Analytics page views. Quote-form answers are not collected. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MR451NKJ5X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    let safeReferrer = '';
+    try { const ref = new URL(document.referrer); safeReferrer = ref.origin + ref.pathname; } catch (_) {}
+    gtag('config', 'G-MR451NKJ5X', {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      page_location: location.origin + location.pathname,
+      page_referrer: safeReferrer
+    });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f1eb">
   <meta name="description" content="Form &amp; Scale Studio creates 3D-printed architectural scale models from your design files. Physical building and site models for design reviews and client presentations.">
@@ -106,7 +121,7 @@
     </div>
   </section>
 
-  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> Form &amp; Scale Studio. Architectural ideas, made tangible.</p><div class="footer-links"><a href="#top">Back to top ↑</a><a href="#inquiry">Project inquiries</a></div></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> Form &amp; Scale Studio. Architectural ideas, made tangible.</p><div class="footer-links"><a href="#top">Back to top ↑</a><a href="#inquiry">Project inquiries</a><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Visit statistics: Google Analytics</a></div></div></footer>
 
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
